@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      display: grid;
+      height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      grid-template-areas:
+        "header"
+        "article"
+        "footer";
+      grid-template-rows: 1fr 1fr 15%;
+      padding: 0;
+      margin: 0;
+    }
+
+    body div {
+      padding: 10px;
+    }
+
+    #header {
+      grid-area: header;
+      background: #296078;
+      color: #ffffff;
+    }
+
+    #article {
+      grid-area: article;
+    }
+
+    #nav {
+      display: none;
+    }
+
+    #footer {
+      grid-area: footer;
+      background: #333333;
+      color: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 400;
+    }
+
+    a:link {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #000000;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        grid-template-areas:
+          "header header"
+          "nav article"
+          "footer footer";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 2fr 15%;
+      }
+
+      #nav {
+        display: block;
+        grid-area: nav;
+        background: #e6e6e6;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Аккаклаев Александр Асламурзаевич</h1>
+  </div>
+  <div id="article">
+    <h2 id="anchor1">Биография</h2>
+    <p>
+      Родился 1907 году в городе Алагире Северной Осетии. На службу в органы
+      внутренних дел принят милиционером Алагирского райотделения милиции в
+      1928 году. После окончания Новочеркасской школы милиции назначен
+      участковым уполномоченным милиции, в 1938 году выдвинут на должность
+      начальника Алагирского райнного отделения милиции НКВД СОАССР. В 1941
+      году назначен начальником оперативного отдела Управления милиции НКВД
+      СОАССР.
+    </p>
+    <h2 id="anchor2">Подвиги</h2>
+    <p>
+      В период временного пребывания немецко-фашстских захватчиков на
+      территории Северной Осетии выполнял специальные задания руководства
+      НКВД, вел активную работу по борьбе с бандгруппами, которые были образованы
+      из числа изменников Родины, скрывавшихся в горной и лесистой местности.
+    </p>
+    <h2 id="anchor3">Награды</h2>
+    <p>
+      За проявленное мужество и храбрость в борьбе с приступностью
+      награжден орденами Ленина, Красного Знамени, двумя орденам Красной
+      Звезды, медалями "За отвагу", "За оборону Кавказа", "За победу над
+      германией в Великой Отечественной войне 1941 - 1945 гг.", Почетной
+      грамотой Президиума Верховного Совета СОАССР.
+    </p>
+  </div>
+  <div id="nav">
+    <ul>
+      <li>
+        <a href="#anchor1">Биография</a>
+      </li>
+      <li>
+        <a href="#anchor2">Подвиги</a>
+      </li>
+      <li>
+        <a href="#anchor3">Награды</a>
+      </li>
+    </ul>
+  </div>
+  <div id="footer">
+    <h3>Пока других статей нет &#128532;</h3>
+  </div>
+</body>
+
+</html>
